@@ -15,7 +15,7 @@ export function mapInit() {
   );
 
   myIcon = L.icon({
-    iconUrl: "../assets/icon-location.svg",
+    iconUrl: "./assets/icon-location.svg",
     iconSize: [46, 56], // size of the icon
     iconAnchor: [30, 56], // point of the icon which will correspond to marker's location
   });
