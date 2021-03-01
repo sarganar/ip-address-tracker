@@ -1,0 +1,243 @@
+/* ------------- UTILITIES -----------------------*/
+/* box sizing de Paul Irish */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 80rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* ------------- STYLES -----------------------*/
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.4rem;
+
+  background-color: hsla(268, 18%, 14%, 0.164);
+  background-color: var(--color-background);
+  position: relative;
+  /* height: 100vh; */
+}
+
+:root {
+  --color-text-gray: hsl(0, 0%, 59%);
+  --color-dark-gray: hsl(0, 0%, 17%);
+  --color-separator-gray: hsla(0, 0%, 59%, 0.363);
+  --color-background: whitesmoke;
+}
+
+p {
+  margin: 0;
+}
+
+/* ------------- HEADER -----------------------*/
+
+header {
+  padding: 1rem 0;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* ------------- IP INPUT -----------------------*/
+.input-ip {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 50rem;
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 5rem;
+}
+#ip-entry {
+  background-color: white;
+  appearance: none;
+  border: none;
+  font-size: 18px;
+  padding: 0 1rem;
+  border-radius: 1rem 0 0 1rem;
+  cursor: pointer;
+
+}
+.buttom-submit {
+  background-color: black;
+  appearance: none;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+}
+
+/* ------------- PANEL INFO -----------------------*/
+.panel-info {
+  margin: 2rem auto 0 auto;
+  padding: 2rem 0;
+  width: 90%;
+  max-width: 50rem;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  -webkit-box-shadow: -5px 12px 25px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: -5px 12px 25px 1px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .panel-info {
+    padding-left: 3rem;
+    margin: 6rem auto 0 auto;
+    max-width: 100rem;
+    text-align: left;
+  }
+  .only-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .item {
+    border-right: 1px solid var(--color-separator-gray);
+  }
+  .item:last-child {
+    border: none;
+  }
+}
+.item .description {
+  padding: 1rem 0 1rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--color-text-gray);
+}
+.item .value {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ------------- BACKGROUND & MAP -----------------------*/
+.behind-layout {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.bg-top {
+  height: 25rem;
+}
+.bg-top img {
+  object-fit: fill;
+  object-position: 0 0;
+  width: 100%;
+  height: 25rem;
+}
+
+.map-container {
+  background-color: var(--color-background);
+  height: 50rem;
+}
+
+/* ------------- MESSAGES DIV -----------------------*/
+.messages{
+  margin: 4rem auto;
+  height: 10rem;
+  color: var(--color-text-gray);
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+/* ------------- FOOTER -----------------------*/
+footer {
+  margin-top: 4rem;
+  /* position: absolute;
+  bottom: 0;
+  z-index: 1; */
+  background-color: var(--color-background);
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  color: hsl(230, 64%, 23%);
+}
+.attribution a {
+  color: hsl(228, 84%, 33%);
+  text-decoration: none;
+}
+
+/* ------------- SPINNER -----------------------*/
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+@media (min-width: 768px) {
+  .spinner {
+    margin: auto auto;
+  }
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}

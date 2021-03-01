@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script src="./js/app.js" defer type="module"></script>
+  <title>IP Address Tracker</title>
+
+
+</head>
+
+<body>
+
+
+
+  <header class="container">
+    <h1>IP Address Tracker</h1>
+  </header>
+
+  <main>
+    <section>
+      <form id="ip-form">
+        <div class="input-ip">
+          <input type="text" name="ip-entry" id="ip-entry" placeholder=" Search for any IP address">
+          <button type="submit" class="buttom-submit">
+            <img src="./assets/icon-arrow.svg" alt="arrow">
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <div class="panel-info">
+        <div class="messages" hidden></div>
+        <div class="only-info">
+          <div class="item">
+            <p class="description">IP ADDRESS</p>
+            <p class="value" id="ip-value">192.212.174.101</p>
+          </div>
+          <div class="item">
+            <div class="separator"></div>
+            <p class="description">LOCATION</p>
+            <p class="value" id="loc-value">Brooklyn, NY 10001</p>
+          </div>
+          <div class="item">
+            <p class="description">TIME ZONE</p>
+            <p class="value" id="utc-value">UTC-05:00</p>
+          </div>
+          <div class="item">
+            <p class="description">ISP</p>
+            <p class="value" id="isp-value">SpaceX Starlink</p>
+          </div>
+        </div>
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="behind-layout">
+    <div class="bg-top">
+      <img src="./assets/pattern-bg.png" alt="">
+    </div>
+    <div class="map-container" id="ip-map"></div>
+    <footer class="container">
+      <div class="container attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded with ❤ by <a href="https://github.com/sarganar/" target="_blank"">Sarganar</a>.
+      </div>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>
